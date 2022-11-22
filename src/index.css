@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .abs-center {
+    @apply absolute  bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+  }
+}
 
 @layer components {
   .sidebar-icon__c {
@@ -16,6 +29,13 @@
     @apply bg-green-500 text-white
            rounded-xl
   }
+
+  .sidebar-tooltip {
+    @apply w-auto p-2 min-w-max rounded-md shadow-md
+    text-white bg-gray-900 
+    text-xs font-bold 
+    transition-all duration-100 scale-0 origin-left;
+  } 
 }
 
 :root {

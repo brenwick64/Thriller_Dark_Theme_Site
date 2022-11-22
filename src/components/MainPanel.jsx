@@ -4,13 +4,15 @@ import jsImage from '../assets/js_img.png'
 import reactImage from '../assets/react_img.png'
 import pythonImage from '../assets/python_img.png'
 
+import test from '../assets/615x375_test.png'
+
 
 function MainPanel({ selectedItem }) {
 
   function getImage(selectedItem) {
     switch(selectedItem) {
       case 'html':
-        return <img className='opacity-0 animate-appear' alt='' src={htmlImage} key='html'></img>
+        return <img className='opacity-0 animate-appear' alt='' src={test} key='html'></img>
       case 'css':
         return <img className='opacity-0 animate-appear' alt='' src={cssImage} key='css'></img>
       case 'js':
@@ -25,7 +27,7 @@ function MainPanel({ selectedItem }) {
   }
 
   return (
-    <div className='flex w-full h-full bg-primary p-10'>
+    <div className='flex w-full h-full bg-[#232831] p-10'>
       {getImage(selectedItem)}
     </div>
   );
